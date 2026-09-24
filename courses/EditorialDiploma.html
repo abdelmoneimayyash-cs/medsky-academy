@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="theme-color" content="#2E9BE0"/>
+  <title>ميدسكاي — دبلومة الترجمة الطبية التحريرية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="../images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" type="image/png"/>
+  <link rel="stylesheet" href="../css/courses.css"/>
+</head>
+<body>
+
+  <div class="site-loader" id="siteLoader" aria-hidden="true">
+    <div class="loader-logo-wrap">
+      <img src="../images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky" class="loader-logo"/>
+    </div>
+  </div>
+
+  <!-- ===================== Floating Navbar ===================== -->
+  <header class="msn" id="navbar">
+    <div class="msn-bar">
+
+      <a href="../index.html" class="msn-logo" aria-label="ميدسكاي">
+        <img src="../images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky Training Academy" />
+      </a>
+
+      <nav class="msn-links" aria-label="Main">
+        <a href="../index.html" class="msn-link" data-i18n="nav_home">الرئيسية</a>
+        <a href="../courses.html" class="msn-link" aria-current="page" data-i18n="nav_courses">الدورات</a>
+        <a href="../index.html#programs" class="msn-link" data-i18n="nav_programs">نحو الاحتراف</a>
+        <a href="../index.html#trainers" class="msn-link" data-i18n="nav_trainers">المدربون</a>
+        <a href="https://wa.me/201505628143" target="_blank" rel="noopener" class="msn-link" data-i18n="nav_contact">تواصل معنا</a>
+      </nav>
+
+      <div class="msn-tools">
+
+        <div class="msn-lang" id="langDD">
+          <button type="button" class="msn-icon" id="langToggle" aria-haspopup="menu" aria-expanded="false" aria-label="اختر اللغة">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c2.6 2.6 4 5.9 4 9.5s-1.4 6.9-4 9.5c-2.6-2.6-4-5.9-4-9.5s1.4-6.9 4-9.5z"/></svg>
+          </button>
+          <div class="msn-menu" id="langMenu" role="menu">
+            <button type="button" class="active" data-lang="ar" role="menuitem">العربية</button>
+            <button type="button" data-lang="en" role="menuitem">English</button>
+          </div>
+        </div>
+
+        <button type="button" class="msn-icon" id="themeToggle" aria-label="اختر المظهر">
+          <span class="msn-swap" aria-hidden="true">
+            <svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </button>
+
+        <span class="msn-sep" aria-hidden="true"></span>
+
+        <a href="../auth.html" class="msn-login">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="login">تسجيل الدخول</span>
+        </a>
+      </div>
+
+      <button type="button" class="msn-burger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== Mobile Sheet ===================== -->
+  <div class="msn-sheet" id="mobileMenu" role="dialog" aria-modal="true">
+    <div class="msn-backdrop" data-close></div>
+    <div class="msn-panel">
+
+      <div class="msn-panel-head">
+        <a href="../index.html" class="msn-logo" data-close aria-label="ميدسكاي" style="margin:0;">
+          <img src="../images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky Training Academy" />
+        </a>
+        <button type="button" class="msn-close" id="mobileClose" aria-label="إغلاق القائمة">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="msn-mlinks">
+        <a href="../index.html" class="msn-mlink" data-close data-i18n="nav_home">الرئيسية</a>
+        <a href="../courses.html" class="msn-mlink" aria-current="page" data-close data-i18n="nav_courses">الدورات</a>
+        <a href="../index.html#programs" class="msn-mlink" data-close data-i18n="nav_programs_alt">البرامج</a>
+        <a href="../index.html#trainers" class="msn-mlink" data-close data-i18n="nav_trainers">المدربون</a>
+        <a href="https://wa.me/201505628143" target="_blank" rel="noopener" class="msn-mlink" data-close data-i18n="nav_contact">تواصل معنا</a>
+      </div>
+
+      <div class="msn-mrow">
+        <span data-i18n="msetting_lang">اللغة</span>
+        <div class="msn-seg">
+          <button type="button" class="active" data-lang="ar">العربية</button>
+          <button type="button" data-lang="en">English</button>
+        </div>
+      </div>
+
+      <button type="button" class="msn-mrow" id="mobileThemeToggle">
+        <span data-i18n="msetting_theme">المظهر</span>
+        <span class="msn-row-end">
+          <span id="mobileThemeValue">فاتح</span>
+          <span class="msn-swap" aria-hidden="true">
+            <svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </span>
+      </button>
+
+      <div class="msn-mactions">
+        <a href="../auth.html?mode=register" class="msn-cta" data-close data-i18n="btn_signup">ابدأ مجاناً</a>
+        <a href="../auth.html" class="msn-login" data-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="login">تسجيل الدخول</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="ph-orb ph-orb-1"></div>
+      <div class="ph-orb ph-orb-2"></div>
+      <div class="ph-grid"></div>
+    </div>
+
+    <div class="ph-inner">
+      <div class="ph-text rv">
+        <div class="ph-kicker">
+          <span class="ph-dot"></span>
+          <i class="fa-solid fa-pen-nib"></i>
+          <span data-i18n="wr_tag">دبلومة التحريرية</span>
+        </div>
+        <h1><span data-i18n="wr_h2_1">دبلومة الترجمة الطبية التحريرية</span><br/><em data-i18n="wr_h2_2">بناء المترجم الطبي المحترف</em></h1>
+        <p data-i18n="wr_desc">برنامج تدريبي متدرّج يتكوّن من مسارين — النظري والعملي — يهدف إلى إعداد مترجم طبي قادر على التعامل مع الملفات الطبية الحقيقية وفق متطلبات سوق العمل الدولي. يشمل البرنامج إرشاداً مهنياً مجانياً حتى بعد التخرج.</p>
+        <div class="ph-cta">
+          <a href="#content" class="btn-p btn-ripple"><i class="fa-solid fa-rocket"></i> <span data-i18n="hero_btn_explore">استكشف الدبلومة</span></a>
+          <a href="https://wa.me/201505628143" target="_blank" class="btn-wa btn-ripple">
+            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="nav_contact">تواصل معنا</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="content">
+    <section class="sec">
+      <div class="wrap">
+
+        <div class="path-div rv"><div class="pd-line"></div><div class="pd-badge"><i class="fa-solid fa-book"></i> <span data-i18n="wr_path1_badge">أولاً: المسار النظري (60 ساعة)</span></div><div class="pd-line"></div></div>
+
+        <div class="lv-card rv">
+          <div class="lv-head"><div class="lv-num">1</div><div class="lv-title"><h3 data-i18n="lv1_title">أساسيات الترجمة الطبية والتعامل مع الملفات الطبية</h3><span data-i18n="lv1_sub">الأساس المعرفي للمترجم الطبي</span></div></div>
+          <p class="lv-desc" data-i18n="lv1_desc">هذا المستوى مخصص لوضع الأساس الصحيح، من خلال الدمج بين الفهم الطبي، مهارات الترجمة، ومعايير الجودة المعتمدة في المجال.</p>
+          <div class="ll">
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i1">مبادئ الترجمة الطبية والقواعد الحاكمة لها</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i2">دراسة معمقة للمصطلحات الطبية وكيفية تفكيكها وفهمها</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i3">مهارات البحث الطبي المتقدم وترجمة المصطلحات</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i4">صياغة النص الطبي بأسلوب مهني ودقيق</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i5">أبرز الأخطاء التي تؤدي إلى رفض الترجمات وكيفية تجنبها</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i6">كيفية التفكير كمترجم طبي محترف وليس كمجرد ناقل نص</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i7">آلية عمل دليل الأسلوب (Style Guide) داخل شركات الترجمة</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i8">فهم معايير تقييم الجودة وطرق اجتياز اختبارات القبول</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i9">الترجمة الإبداعية (Transcreation) في المحتوى الطبي التسويقي</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i10">احتراف مهارات التوطين (Localization) وملاءمة النصوص ثقافياً لسوق العمل</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i11">منهجية ترجمة التقارير الطبية</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i12">منهجية ترجمة الأبحاث العلمية</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i13">منهجية ترجمة تقارير الأشعة</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i14">منهجية ترجمة تقارير الطب الشرعي</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i15">منهجية ترجمة النشرات الدوائية</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i16">منهجية ترجمة المواقع الطبية</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i17">مهارات التدقيق اللغوي والمراجعة</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv1_i18">مهارات استخدام الذكاء الاصطناعي (AI) في الترجمة والمراجعة والتدقيق اللغوي</span></div>
+          </div>
+        </div>
+
+        <div class="lv-card rv">
+          <div class="lv-head"><div class="lv-num">2</div><div class="lv-title"><h3 data-i18n="lv2_title">المحور الثالث: التسويق وبناء الهوية المهنية</h3><span data-i18n="lv2_sub">التأهيل لسوق العمل وفتح الفرص الحقيقية</span></div></div>
+          <p class="lv-desc" data-i18n="lv2_desc">يركّز على تأهيلك للتعامل مع سوق العمل وفتح فرص حقيقية من خلال الحضور الرقمي وبناء الهوية المهنية.</p>
+          <div class="ll">
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i1">كيفية التواصل مع الشركات عبر الإيميل</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i2">كتابة Cover Letter احترافي</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i3">إنشاء بروفايل متميز على LinkedIn</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i4">تعلّم أسرار التسويق وبناء علامتك الشخصية (Personal Branding) على لينكد إن</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i5">إعداد سيرة ذاتية (CV) احترافية مخصّصة لسوق الترجمة</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i6">كيف تصل لشركات الترجمة وتجذب عملاءك المستهدفين</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i7">كيف تحدد أسعارك في السوق، وتنظم فواتيرك وطرق دفعك باحترافية</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i8">كيف تجعل عيّنة عملك (Sample) تتحدث بالنيابة عن مهاراتك وتُبهر العملاء</span></div>
+            <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv2_i9">التعلّم على Canva وتصميم الهوية البصرية الاحترافية</span></div>
+          </div>
+        </div>
+
+        <div class="lv-card rv">
+          <div class="lv-head"><div class="lv-num">3</div><div class="lv-title"><h3 data-i18n="lv3_title">أدوات الترجمة (CAT Tools) والذكاء الاصطناعي</h3><span data-i18n="lv3_sub">MTPE + AI للمترجم العصري</span></div></div>
+          <p class="lv-desc" data-i18n="lv3_desc">تدريب عملي شامل على أحدث الأدوات في عالم الترجمة، من برامج (CAT Tools) الاحترافية إلى أدوات الذكاء الاصطناعي.</p>
+          <div class="two-col">
+            <div class="ll">
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i1">SDL Trados — البرنامج الأكثر استخداماً في الشركات الدولية</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i2">MemoQ — بديل احترافي متقدم</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i3">مهارة التحرير اللاحق للترجمة الآلية (MTPE) بعمق</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i4">دليل شامل لدمج أداة DeepL الاحترافية في سير العمل</span></div>
+            </div>
+            <div class="ll">
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i5">استخدام AI لدعم جودة الترجمة والمراجعة</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i6">كتابة CV احترافي بمساعدة AI</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i7">توليد Cover Letter متميّز بالذكاء الاصطناعي</span></div>
+              <div class="li"><i class="fa-solid fa-circle-dot"></i><span data-i18n="lv3_i8">تحسين ملف LinkedIn بذكاء الاصطناعي</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-div rv" style="margin-top:60px;"><div class="pd-line"></div><div class="pd-badge"><i class="fa-solid fa-flask-vial"></i> <span data-i18n="wr_path2_badge">ثانياً: المسار العملي</span></div><div class="pd-line"></div></div>
+
+        <div class="grad-top-bar lv-card rv" style="margin-bottom:32px;">
+          <p style="font-size:1rem;line-height:1.8;">
+            <strong style="color:var(--text)" data-i18n="wr_quote">"من الدراسة إلى سوق العمل: تجربة حقيقية لبيئة شركات الترجمة"</strong><br/>
+            <span data-i18n="wr_quote_desc">في هذا المسار، ننتقل من مرحلة المفاهيم إلى مرحلة التنفيذ — ستعمل على مشاريع حقيقية تغطي أهم تخصصات السوق الطبي مع تقييم مهني يحاكي معايير شركات الترجمة الدولية.</span>
+          </p>
+        </div>
+
+        <div class="files-g rv">
+          <div class="fc"><div class="fc-ico i1"><i class="fa-solid fa-hospital"></i></div><h4 data-i18n="fc1_h">التقارير الطبية (Medical Reports)</h4><p data-i18n="fc1_p">ترجمة التقارير التشخيصية، نتائج التحاليل المخبرية، وملخصات الخروج من المستشفى.</p><span class="ftag" data-i18n="fc1_tag">متقدم</span></div>
+          <div class="fc"><div class="fc-ico i2"><i class="fa-solid fa-radiation"></i></div><h4 data-i18n="fc2_h">تقارير الأشعة (Radiology Reports)</h4><p data-i18n="fc2_p">التعامل مع المصطلحات الخاصة بالأشعة وفهم اختصاراتها المعقدة.</p><span class="ftag" data-i18n="fc2_tag">متقدم</span></div>
+          <div class="fc"><div class="fc-ico i3"><i class="fa-solid fa-scale-balanced"></i></div><h4 data-i18n="fc3_h">تقارير الطب الشرعي</h4><p data-i18n="fc3_p">التدريب على صياغة التقارير الجنائية الطبية التي تتطلب دقة قانونية وعلمية بالغة.</p><span class="ftag" data-i18n="fc3_tag">متقدم</span></div>
+          <div class="fc"><div class="fc-ico i4"><i class="fa-solid fa-pills"></i></div><h4 data-i18n="fc4_h">النشرات الدوائية (PILs)</h4><p data-i18n="fc4_p">ترجمة النشرات الداخلية للأدوية الموجهة للمرضى مع مراعاة لغة الجمهور المستهدف.</p><span class="ftag" data-i18n="fc4_tag">صيدلاني</span></div>
+          <div class="fc"><div class="fc-ico i5"><i class="fa-solid fa-microscope"></i></div><h4 data-i18n="fc5_h">الأبحاث العلمية</h4><p data-i18n="fc5_p">معرفة أسرار الصياغة الأكاديمية الرصينة ونقل المصطلحات العلمية المعقدة بسلاسة، وإتقان آليات التعامل مع المراجع والاقتباسات.</p><span class="ftag" data-i18n="fc5_tag">بحثي</span></div>
+          <div class="fc"><div class="fc-ico i6"><i class="fa-solid fa-clipboard-list"></i></div><h4 data-i18n="fc6_h">نماذج الموافقة المستنيرة (ICF)</h4><p data-i18n="fc6_p">صياغة "حقوق المريض" و"المخاطر المحتملة" بلغة قانونية دقيقة ومفهومة.</p><span class="ftag" data-i18n="fc6_tag">قانوني طبي</span></div>
+          <div class="fc"><div class="fc-ico i6"><i class="fa-solid fa-globe"></i></div><h4 data-i18n="fc7_h">المواقع الطبية والمقالات الصحية</h4><p data-i18n="fc7_p">القدرة على ترجمة وصياغة المقالات الصحية ومحتوى المواقع الطبية بكفاءة ودقة.</p><span class="ftag" data-i18n="fc7_tag">رقمي</span></div>
+        </div>
+
+        <div class="sec-head rv" style="text-align:right;margin:44px 0 24px;">
+          <h3 style="font-size:1.15rem;"><i class="fa-solid fa-rocket" style="color:var(--accent);"></i> <span data-i18n="adv_head">مهام تطبيقية متقدمة</span></h3>
+        </div>
+        <div class="adv-c rv"><div class="adv-num">1</div><div class="adv-body"><h4 data-i18n="adv1_h">دور المراجع الطبي (The Medical Reviewer)</h4><p data-i18n="adv1_p">تطبيق عملي على كيفية مراجعة ملف مترجم بالفعل — رصد الأخطاء اللغوية والعلمية، وكيفية تقديم التغذية الراجعة وفق معايير الجودة الدولية.</p></div></div>
+        <div class="adv-c rv"><div class="adv-num">2</div><div class="adv-body"><h4 data-i18n="adv2_h">التحرير اللاحق للترجمة الآلية (MTPE)</h4><p data-i18n="adv2_p">كيفية التعامل مع النصوص المترجمة آلياً (DeepL / Google Translate / Ai) وتطبيق مهارات التحرير اللاحق لتحويل النص من ترجمة آلية جامدة إلى نص طبي احترافي.</p></div></div>
+
+        <div class="ben-strip rv">
+          <h3><i class="fa-solid fa-star"></i> <span data-i18n="ben_head">مميزات المسار العملي</span></h3>
+          <div class="ben-g">
+            <div class="ben-i"><div class="ben-ico"><i class="fa-solid fa-file-pdf"></i></div><div><strong data-i18n="ben1_h">محاكاة حقيقية</strong><span data-i18n="ben1_p">التعامل مع الملفات بصيغتها الأصلية (PDF, Word, Scan)</span></div></div>
+            <div class="ben-i"><div class="ben-ico"><i class="fa-solid fa-comment-dots"></i></div><div><strong data-i18n="ben2_h">التصحيح المهني</strong><span data-i18n="ben2_p">نقد بنّاء يوضح مواطن القوة والضعف في صياغتك</span></div></div>
+            <div class="ben-i"><div class="ben-ico"><i class="fa-solid fa-briefcase"></i></div><div><strong data-i18n="ben3_h">بناء البورتفوليو</strong><span data-i18n="ben3_p">نماذج أعمال قوية تؤهلك للتقديم في كبرى الشركات</span></div></div>
+          </div>
+        </div>
+
+        <div class="path-div rv" style="margin-top:60px;"><div class="pd-line"></div><div class="pd-badge"><i class="fa-solid fa-gear"></i> <span data-i18n="sys_badge">نظام الدبلومة</span></div><div class="pd-line"></div></div>
+        <div class="sys-g rv">
+          <div class="sys-c"><div class="sys-ico" style="background:linear-gradient(135deg,#0A85C2,#00B4D8);"><i class="fa-solid fa-calendar-days"></i></div><h4 data-i18n="sys1_h">الهيكل الزمني</h4><ul class="sys-l"><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys1_i1_b">المدة القياسية:</strong> <span data-i18n="sys1_i1">3 أشهر بمعدل محاضرتين أسبوعياً</span></span></li><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys1_i2_b">خيار التكثيف:</strong> <span data-i18n="sys1_i2">مرونة كاملة لزيادة عدد المحاضرات</span></span></li></ul></div>
+          <div class="sys-c"><div class="sys-ico" style="background:linear-gradient(135deg,#0077B6,#48CAE4);"><i class="fa-solid fa-video"></i></div><h4 data-i18n="sys2_h">نمط المحاضرات</h4><ul class="sys-l"><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys2_i1_b">مسجّلة HD:</strong> <span data-i18n="sys2_i1">شرح النظري — شاهدها متى شئت</span></span></li><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys2_i2_b">لقاءات Live:</strong> <span data-i18n="sys2_i2">جلسات تفاعلية للتطبيق المباشر</span></span></li></ul></div>
+          <div class="sys-c"><div class="sys-ico" style="background:linear-gradient(135deg,#10b981,#34d399);"><i class="fa-solid fa-rocket"></i></div><h4 data-i18n="sys3_h">الدعم المهني بعد الدورة</h4><ul class="sys-l"><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys3_i1_b">متابعة شخصية:</strong> <span data-i18n="sys3_i1">توجيه مباشر لبناء السيرة الذاتية</span></span></li><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys3_i2_b">شبكة التوظيف:</strong> <span data-i18n="sys3_i2">جروب حصري للخريجين</span></span></li></ul></div>
+          <div class="sys-c"><div class="sys-ico" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);"><i class="fa-solid fa-certificate"></i></div><h4 data-i18n="sys4_h">الاعتماد والحضور</h4><ul class="sys-l"><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys4_i1_b">شهادتان:</strong> <span data-i18n="sys4_i1">للمسار النظري والعملي</span></span></li><li><i class="fa-solid fa-circle-check"></i><span><strong data-i18n="sys4_i2_b">أونلاين 100%:</strong> <span data-i18n="sys4_i2">من أي مكان في العالم</span></span></li></ul></div>
+        </div>
+
+        <div class="path-div rv" style="margin-top:52px;"><div class="pd-line"></div><div class="pd-badge"><i class="fa-solid fa-list-check"></i> <span data-i18n="req_badge">متطلبات الالتحاق</span></div><div class="pd-line"></div></div>
+        <div class="req-g rv">
+          <div class="req-i"><div class="ri-ico"><i class="fa-solid fa-laptop"></i></div><div><strong data-i18n="wr_req1_h">الأدوات</strong><span data-i18n="wr_req1_p">لابتوب للتطبيق والمتابعة</span></div></div>
+          <div class="req-i"><div class="ri-ico"><i class="fa-solid fa-wifi"></i></div><div><strong data-i18n="wr_req2_h">الاتصال</strong><span data-i18n="wr_req2_p">إنترنت مستقر للجلسات المباشرة</span></div></div>
+        </div>
+
+        <div class="path-div rv" style="margin-top:52px;"><div class="pd-line"></div><div class="pd-badge"><i class="fa-solid fa-certificate"></i> <span data-i18n="cert_badge">الشهادات المعتمدة</span></div><div class="pd-line"></div></div>
+        <div class="cert-g rv">
+          <div class="cert-c">
+            <div class="cert-ico"><i class="fa-solid fa-book"></i></div>
+            <h4 data-i18n="cert1_h">شهادة المسار النظري</h4>
+            <p data-i18n="cert1_p">تُمنح بعد إتمام الوحدات النظرية الثلاث واجتياز التقييمات — معتمدة دولياً.</p>
+            <button type="button" class="cert-view-trigger" data-cert-open
+                    data-cert-src="../images/nathari.png"
+                    data-cert-course-key="card1_title"
+                    data-cert-title-key="cert1_h"
+                    data-cert-desc-key="cert1_p">
+              <i class="fa-solid fa-eye"></i> <span data-i18n="cert_view_btn">عرض الشهادة</span>
+            </button>
+          </div>
+          <div class="cert-c">
+            <div class="cert-ico"><i class="fa-solid fa-flask-vial"></i></div>
+            <h4 data-i18n="cert2_h">شهادة المسار العملي</h4>
+            <p data-i18n="cert2_p">تُمنح بعد إتمام جميع التمارين العملية والمشاريع وتلقّي تقييم إيجابي من المدرب.</p>
+            <button type="button" class="cert-view-trigger" data-cert-open
+                    data-cert-src="../images/amali.png"
+                    data-cert-course-key="card1_title"
+                    data-cert-title-key="cert2_h"
+                    data-cert-desc-key="cert2_p">
+              <i class="fa-solid fa-eye"></i> <span data-i18n="cert_view_btn">عرض الشهادة</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="path-div rv" style="margin-top:60px;"><div class="pd-line"></div><div class="pd-badge" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);box-shadow:0 4px 14px rgba(245,158,11,.3);"><i class="fa-solid fa-crown"></i> <span data-i18n="mentor_badge">ثالثاً: الإرشاد المهني (Mentorship) — مجاناً</span></div><div class="pd-line"></div></div>
+
+        <div class="mentor-embed rv">
+          <div class="mentor-embed-head">
+            <div class="me-ico"><i class="fa-solid fa-crown"></i></div>
+            <div>
+              <div class="me-badge"><i class="fa-solid fa-gift"></i> <span data-i18n="mentor_tag">ميزة حصرية مجانية مع الدبلومة</span></div>
+              <h3 data-i18n="mentor_h">نرافقك خطوة بخطوة حتى تصل لسوق العمل</h3>
+              <p data-i18n="mentor_p">لأننا لا نكتفي بتعليمك المهارة — نسعى معك لبناء مسيرة مهنية حقيقية ومستدامة في عالم الترجمة الطبية.</p>
+            </div>
+          </div>
+          <div class="mt-grid">
+            <div class="mt-i"><div class="mt-ico"><i class="fa-solid fa-file-lines"></i></div><div><h4 data-i18n="mt1_h">تجهيز الملفات الشخصية</h4><p data-i18n="mt1_p">مراجعة وتطوير CV و LinkedIn و Cover Letter بعين خبير</p></div></div>
+            <div class="mt-i"><div class="mt-ico"><i class="fa-solid fa-paper-plane"></i></div><div><h4 data-i18n="mt2_h">استراتيجيات التقديم</h4><p data-i18n="mt2_p">أساليب التواصل الاحترافي مع شركات الترجمة الدولية</p></div></div>
+            <div class="mt-i"><div class="mt-ico"><i class="fa-solid fa-calendar-check"></i></div><div><h4 data-i18n="mt3_h">متابعة شهرية</h4><p data-i18n="mt3_p">لقاء مباشر مع المحاضر لتقييم تقدمك والإجابة على استفساراتك</p></div></div>
+            <div class="mt-i"><div class="mt-ico"><i class="fa-brands fa-zoom"></i></div><div><h4 data-i18n="mt4_h">دعم طارئ عبر Zoom</h4><p data-i18n="mt4_p">حجز جلسات سريعة لحل أي تحديات مهنية في أي وقت</p></div></div>
+            <div class="mt-i"><div class="mt-ico"><i class="fa-brands fa-telegram"></i></div><div><h4 data-i18n="mt5_h">شبكة التوظيف الحصرية</h4><p data-i18n="mt5_p">جروب خاص للخريجين لنشر فرص العمل من Vendor Managers</p></div></div>
+            <div class="mt-i"><div class="mt-ico"><i class="fa-solid fa-users"></i></div><div><h4 data-i18n="mt6_h">مجتمع الخريجين</h4><p data-i18n="mt6_p">انضم لشبكة تضم أكثر من 5,000 مترجم طبي من 40 دولة</p></div></div>
+          </div>
+        </div>
+
+        <div class="vid-prev rv">
+          <a href="https://t.me/Medsky_academy/276" target="_blank" rel="noopener" class="vp-play"><i class="fa-solid fa-play"></i></a>
+          <div><strong data-i18n="vid1_h">شاهد المحاضرة الأولى مجاناً</strong><span data-i18n="vid1_p">دبلومة الترجمة الطبية التحريرية — المحاضرة التعريفية</span></div>
+          <a href="https://youtu.be/p7gA5FoHdYg?si=vcdiSIYdLU4YepoJ" target="_blank" rel="noopener" class="va-link"><span data-i18n="vid1_link">مشاهدة الآن</span> <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+
+        <div class="cta-b rv">
+          <h2 data-i18n="wr_cta_h">ابدأ دبلومة الترجمة الطبية التحريرية الآن</h2>
+          <p data-i18n="wr_cta_p">3 أشهر تغيّر مسارك المهني — شهادتان بمعايير دولية + إرشاد مهني مجاني</p>
+          <div class="cta-b-btns">
+            <a href="https://wa.me/201505628143" target="_blank" class="btn-cta-wa btn-ripple">
+              <i class="fa-brands fa-whatsapp"></i> <span data-i18n="cta_wa_btn">تواصل معنا عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo footer-logo">
+          <div class="logo-mark" style="width:46px;height:46px;"><img src="../images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky Training Academy"/></div>
+          <div class="logo-text-wrap"><span class="logo-name">MED<span>SKY</span></span><span class="logo-sub">Training Academy</span></div>
+        </a>
+        <p data-i18n="footer_desc">الأكاديمية الرائدة عبر الإنترنت لتطوير الكوادر الطبية.. نمنحك الأدوات الذكية لتَقود مسيرتك المهنية بثقة وتميز</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/medsky-training-academy/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/medskyacademy?s=11" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://youtube.com/@medskytrainingacademy?si=uDrwWjnonWuhVAhj" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/share/1AsyKzDMmb/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/medsky_academy?igsh=MTI0cWNpODhrNWlqYQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@medsky.training.a?_r=1&_t=ZS-97DGRZnqNWb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.threads.com/@medsky_academy?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+          <a href="https://t.me/Medsky_academy" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4 data-i18n="footer_g1_h">الأكاديمية</h4>
+        <ul>
+          <li><a href="#" data-modal="courses" data-i18n="nav_courses">الدورات</a></li>
+          <li><a href="#" data-modal="programs" data-i18n="nav_programs">نحو الاحتراف</a></li>
+          <li><a href="#" data-modal="certificates" data-i18n="cert_badge">الشهادات</a></li>
+          <li><a href="../index.html#trainers" data-i18n="nav_trainers">المدربون</a></li>
+          <li><a href="#" data-modal="blog" data-i18n="footer_blog">المدونة</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4 data-i18n="footer_g2_h">الدعم</h4>
+        <ul>
+          <li><a href="#" data-modal="help-center" data-i18n="footer_help">مركز المساعدة</a></li>
+          <li><a href="#" data-modal="community-forum" data-i18n="footer_forum">منتدى المجتمع</a></li>
+          <li><a href="#" data-modal="contact-us" data-i18n="nav_contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4 data-i18n="footer_g3_h">القانونية</h4>
+        <ul>
+          <li><a href="#" data-modal="cookie-policy" data-i18n="footer_cookie">سياسة الكوكيز</a></li>
+          <li><a href="#" data-modal="refund-policy" data-i18n="footer_refund">سياسة الاسترداد</a></li>
+          <li><a href="#" data-modal="accessibility" data-i18n="footer_access">إمكانية الوصول</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 data-i18n="footer_contact_h">تواصل معنا</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@medsky.academy">Medskytrainingacademy@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+201505628143" dir="ltr">+20 15 05628143</a></li>
+          <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer_country">مصر</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span data-i18n="footer_copy">&copy; 2026 MedSky للتدريب الطبي. جميع الحقوق محفوظة.</span></p>
+    </div>
+  </footer>
+
+  <div class="footer-modal-overlay" id="footerModalOverlay">
+    <div class="footer-modal-box" role="dialog" aria-modal="true" aria-labelledby="footerModalTitle">
+      <button class="footer-modal-close" id="footerModalClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      <div class="footer-modal-icon" id="footerModalIcon"><i class="fa-solid fa-circle-info"></i></div>
+      <h3 class="footer-modal-title" id="footerModalTitle"></h3>
+      <div class="footer-modal-body" id="footerModalBody"></div>
+    </div>
+  </div>
+
+  <div class="cert-modal-overlay" id="certModalOverlay">
+    <div class="cert-modal-box" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+      <div class="cert-modal-head">
+        <div>
+          <h3 class="cert-modal-title" id="certModalTitle">دبلومة الترجمة الطبية</h3>
+          <span class="cert-modal-subtitle" id="certModalSubtitle">شهادة معتمدة</span>
+        </div>
+        <button class="cert-modal-close" id="certModalClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="cert-modal-body">
+        <div class="cert-zoom-wrap" id="certZoomWrap">
+          <img id="certModalImg" src="../images/nathari.png" alt="شهادة معتمدة"/>
+        </div>
+      </div>
+
+      <p class="cert-modal-desc" id="certModalDesc">وصف الشهادة يظهر هنا.</p>
+
+      <div class="cert-modal-actions">
+        <button class="cert-zoom-btn" id="certZoomOut" aria-label="تصغير"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button class="cert-zoom-btn" id="certZoomReset" aria-label="إعادة الضبط"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button class="cert-zoom-btn" id="certZoomIn" aria-label="تكبير"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <a href="#" id="certDownloadBtn" class="cert-download-btn" download>
+          <i class="fa-solid fa-download"></i> <span data-i18n="cert_download_btn">تحميل الشهادة</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="../javascript/courses.js"></script>
+</body>
+</html>
