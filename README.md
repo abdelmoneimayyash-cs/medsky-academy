@@ -42,9 +42,35 @@ Explore the deployed platform: **[medskyacademy.com](https://medskyacademy.com)*
 
 ## Screenshots
 
-| Homepage | Diploma programs |
-| --- | --- |
-| ![Homepage preview](docs/images/homepage.webp) | [View diploma programs](https://medskyacademy.com/courses.html) |
+### Homepage
+![MedSky Academy homepage](docs/images/homepage.webp)
+
+### Training diplomas
+
+<div align="center">
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+**Medical Editorial Translation Diploma**
+
+<img src="images/tahreree.png" alt="Medical Editorial Translation Diploma" width="100%" />
+
+</td>
+<td width="50%" align="center">
+
+**Medical Instant Interpreting Diploma**
+
+<img src="images/fawreee.png" alt="Medical Instant Interpreting Diploma" width="100%" />
+
+</td>
+</tr>
+</table>
+
+[Explore all diploma programs](https://medskyacademy.com/courses.html)
+
+</div>
 
 ## Technology Stack
 
