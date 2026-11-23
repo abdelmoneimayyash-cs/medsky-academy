@@ -6,35 +6,45 @@
 
 ### A digital learning platform for medical translation training
 
-[![Live Website](https://img.shields.io/badge/Live%20Website-medskyacademy.com-5B9DA8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://medskyacademy.com)
+[![Live Website](https://img.shields.io/badge/Live%20Website-medskyacademy.com-147CC1?style=for-the-badge&logo=googlechrome&logoColor=white)](https://medskyacademy.com)
 [![Node.js](https://img.shields.io/badge/Node.js-22%2B-43853D?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5-111111?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
 <img src="docs/images/medsky-banner.svg" alt="MedSky Academy — Digital Medical Education" width="100%" />
 
+**Learn with purpose. Build a career in medical translation.**
+
 </div>
+
+---
 
 ## Overview
 
-**MedSky Academy** is an online training platform focused on medical translation education. The website presents training programs and diploma paths for **editorial** and **instant/interpreting medical translation**, with a dedicated experience for discovering courses and accessing learner accounts.
+**MedSky Academy** is a digital training platform focused on medical translation education. It introduces specialized diploma pathways in **medical editorial translation** and **medical interpreting**, helping learners explore structured training programs and access their learning accounts.
 
-The project combines a responsive front end with a Node.js and Express backend.
+The project combines a responsive, Arabic-first web experience with a Node.js and Express backend.
 
-## Screenshots
+## Live Preview
 
-A preview of the MedSky Academy homepage.
+Explore the deployed platform: **[medskyacademy.com](https://medskyacademy.com)**
 
 ![MedSky Academy homepage](docs/images/homepage.webp)
 
-## Platform
+## Key Areas
 
-| Area | Description |
+| Area | What it includes |
 | --- | --- |
-| Home page | Academy introduction, programs, trainers and course discovery |
-| Training programs | Dedicated pages for the Editorial Diploma and Instant Diploma |
-| Learner accounts | Sign-in and account experience |
+| Academy homepage | Introduction, training pathways, trainers and course discovery |
+| Diploma programs | Dedicated pages for the Editorial Diploma and Instant Diploma |
+| Learner access | Sign-in and learner account interface |
 | Authentication API | Server-side authentication and session handling |
 | Privacy | Dedicated privacy information page |
+
+## Screenshots
+
+| Homepage | Diploma programs |
+| --- | --- |
+| ![Homepage preview](docs/images/homepage.webp) | [View diploma programs](https://medskyacademy.com/courses.html) |
 
 ## Technology Stack
 
@@ -43,15 +53,16 @@ A preview of the MedSky Academy homepage.
 - **Database:** SQLite
 - **Authentication:** Server-side sessions
 - **Email:** Nodemailer (optional SMTP configuration)
-- **Additional integrations:** Google Identity Services
+- **Identity integration:** Google Identity Services
 
-## Project Structure
+## Repository Structure
 
 ```text
 medsky-academy/
 ├── courses/                 # Diploma detail pages
 ├── css/                     # Page styles
-├── images/                  # Brand and platform imagery
+├── docs/images/             # Repository documentation visuals
+├── images/                  # Brand and course imagery
 ├── javascript/              # Frontend interactions
 ├── server/
 │   ├── routes/              # Authentication and user routes
@@ -59,9 +70,9 @@ medsky-academy/
 │   ├── config.js            # Server configuration
 │   ├── db.js                # SQLite database
 │   ├── index.js             # Express application
-│   ├── mailer.js             # Email integration
-│   ├── security.js           # Security utilities
-│   └── session.js            # Session handling
+│   ├── mailer.js            # Email integration
+│   ├── security.js          # Security utilities
+│   └── session.js           # Session handling
 ├── account.html
 ├── auth.html
 ├── courses.html
@@ -91,17 +102,17 @@ cd medsky-academy
 npm install
 ```
 
-### 3. Configure environment
+### 3. Configure the application
 
-Review `server/config.js` and configure deployment-specific values through environment variables where supported. Keep credentials, SMTP passwords, private keys and production secrets out of source control.
+Review `server/config.js` and provide the environment-specific configuration required by your deployment. Keep credentials, SMTP passwords, private keys and production secrets out of source control.
 
-### 4. Run the development server
+### 4. Start locally
 
 ```bash
 npm run dev
 ```
 
-The application starts on **http://localhost:3000** by default.
+The development server uses **http://localhost:3000** by default.
 
 For production:
 
@@ -113,20 +124,21 @@ npm start
 
 | Command | Purpose |
 | --- | --- |
-| `npm run dev` | Start the server with Node.js watch mode |
+| `npm run dev` | Start the server in watch mode |
 | `npm start` | Start the production server |
 | `npm test` | Run the Node.js test suite |
 
-## Live Project
-
-Visit **[medskyacademy.com](https://medskyacademy.com)** to explore the deployed platform.
-
-## Security Notes
+## Security
 
 - Never commit `.env` files, database files, credentials or private keys.
 - Use HTTPS in production.
-- Configure secure cookies and production session settings for the deployment environment.
-- Rotate any credential that has ever been committed publicly.
+- Configure secure cookies and production session settings for deployment.
+- Rotate any credential that has previously been exposed in a public commit.
+
+## Project
+
+**Website:** [medskyacademy.com](https://medskyacademy.com)  
+**Repository:** [github.com/abdelmoneimayyash-cs/medsky-academy](https://github.com/abdelmoneimayyash-cs/medsky-academy)
 
 ---
 
