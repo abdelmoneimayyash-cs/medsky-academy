@@ -1,0 +1,52 @@
+/* ============ مؤثرات مشتركة ============ */
+button,input,select,textarea{font-family:inherit;}
+
+/* ---------- شبكة مربعات متحركة في الهيرو ---------- */
+.hero-fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+  -webkit-mask-image:radial-gradient(ellipse 80% 72% at 50% 42%,#000 0%,rgba(0,0,0,.55) 55%,transparent 100%);
+  mask-image:radial-gradient(ellipse 80% 72% at 50% 42%,#000 0%,rgba(0,0,0,.55) 55%,transparent 100%);}
+.hg-lines{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(var(--glow-rgb,31,143,224),.15) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--glow-rgb,31,143,224),.15) 1px,transparent 1px);
+  background-size:64px 64px;}
+.hg-c{position:absolute;width:63px;height:63px;margin:1px 0 0 1px;background:rgba(var(--glow-rgb,31,143,224),.13);box-shadow:inset 0 0 0 1px rgba(var(--glow-rgb,31,143,224),.4);
+  border-radius:3px;opacity:0;animation:hgCell var(--t,5s) ease-in-out var(--d,0s) infinite;}
+@keyframes hgCell{0%,100%{opacity:0;transform:scale(.82);}45%,55%{opacity:1;transform:scale(1);}}
+.hg-r{position:absolute;left:0;top:0;will-change:transform;}
+.hg-r::before{content:'';position:absolute;border-radius:2px;background:var(--accent);box-shadow:0 0 10px 2px rgba(var(--glow-rgb,31,143,224),.7);}
+.hg-r.h{height:2px;width:0;animation:hgRunH var(--t,8s) linear var(--d,0s) infinite;}
+.hg-r.h::before{width:64px;height:2px;right:0;top:-.5px;background:linear-gradient(90deg,transparent,var(--accent));}
+.hg-r.v{width:2px;height:0;animation:hgRunV var(--t,9s) linear var(--d,0s) infinite;}
+.hg-r.v::before{height:64px;width:2px;bottom:0;left:-.5px;background:linear-gradient(180deg,transparent,var(--accent));}
+@keyframes hgRunH{from{transform:translate(-90px,var(--y,0));}to{transform:translate(calc(var(--w,1200px) + 90px),var(--y,0));}}
+@keyframes hgRunV{from{transform:translate(var(--x,0),-90px);}to{transform:translate(var(--x,0),calc(var(--h,800px) + 90px));}}
+.hg-lines.hot{opacity:0;transition:opacity .35s ease;
+  background-image:linear-gradient(rgba(var(--glow-rgb,31,143,224),.6) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--glow-rgb,31,143,224),.6) 1px,transparent 1px);
+  -webkit-mask-image:radial-gradient(circle 190px at var(--cx,-999px) var(--cy,-999px),#000 0,transparent 100%);mask-image:radial-gradient(circle 190px at var(--cx,-999px) var(--cy,-999px),#000 0,transparent 100%);}
+.hero-fx.hot-on .hg-lines.hot{opacity:1;}
+.hg-t{position:absolute;width:63px;height:63px;margin:1px 0 0 1px;border-radius:3px;background:rgba(var(--glow-rgb,31,143,224),.3);box-shadow:inset 0 0 0 1px rgba(var(--glow-rgb,31,143,224),.75),0 0 18px rgba(var(--glow-rgb,31,143,224),.45);animation:hgTrail 1.25s ease-out forwards;}
+@keyframes hgTrail{0%{opacity:1;transform:scale(1);}100%{opacity:0;transform:scale(.8);}}
+.hero-fx.is-paused *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){.hg-c,.hg-r{animation:none !important;}.hg-r{display:none;}.hg-c{opacity:.5;}}
+
+/* ---------- زر العودة للأعلى: حلقة تقدّم ---------- */
+.back-to-top{overflow:visible;}
+.btt-ring{position:absolute;top:-5px;left:-5px;width:56px;height:56px;max-width:none !important;transform:rotate(-90deg);pointer-events:none;overflow:visible;}
+.btt-ring circle{fill:none;stroke-linecap:round;}
+.btt-ring .bg{stroke:var(--border-strong);stroke-width:2.5;opacity:.7;}
+.btt-ring .fg{stroke:var(--accent);stroke-width:3;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .12s linear;filter:drop-shadow(0 0 3px rgba(var(--glow-rgb,31,143,224),.5));}
+
+/* ---------- تلميح "انقر لعرض التفاصيل" على كاردات الدورات ---------- */
+.c-hint{position:absolute;bottom:10px;inset-inline-start:10px;z-index:4;display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;
+  font-size:.72rem;font-weight:700;line-height:1;color:#fff;background:rgba(15,20,30,.62);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);pointer-events:none;}
+.c-hint i{font-size:.8rem;animation:cTap 1.8s ease-in-out infinite;}
+@keyframes cTap{0%,100%{transform:translateY(0) scale(1);}40%{transform:translateY(-3px) scale(1.12);}60%{transform:translateY(1px) scale(.94);}}
+.dc-img,.course-img-wrap{position:relative;}
+
+/* ---------- إشعار (Toast) ---------- */
+.fx-toast{position:fixed;left:50%;bottom:26px;z-index:1300;display:flex;align-items:center;gap:12px;max-width:min(92vw,420px);padding:13px 16px 13px 14px;border-radius:16px;
+  background:var(--bg-card);color:var(--text);border:1px solid var(--border-strong);box-shadow:var(--shadow-lg);font-size:.88rem;font-weight:600;line-height:1.5;
+  transform:translate(-50%,24px);opacity:0;pointer-events:none;transition:transform .5s var(--ease,ease),opacity .4s ease;}
+.fx-toast.show{transform:translate(-50%,0);opacity:1;pointer-events:auto;}
+.fx-toast .ti{width:34px;height:34px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);}
+.fx-toast button{margin-inline-start:4px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:var(--text-muted);font-size:.8rem;}
+.fx-toast button:hover{color:var(--text);background:var(--accent-soft);}

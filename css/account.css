@@ -1,0 +1,34 @@
+/* ===== MedSky account page ===== */
+.acc-main{align-items:flex-start;padding-top:120px;padding-bottom:60px;}
+.acc-shell{position:relative;z-index:2;width:100%;max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:22px;padding:0 16px;}
+.acc-shell[hidden]{display:none;}
+.acc-card{background:var(--bg-card);border-radius:28px;padding:26px;box-shadow:var(--shadow-md,0 10px 30px rgba(0,0,0,.08));}
+html[data-theme] .acc-card{background:var(--nm-bg,var(--bg-card));box-shadow:var(--nm-raised,var(--shadow-md));}
+.acc-card h2{display:flex;align-items:center;gap:10px;font-size:1.1rem;margin:0 0 18px;color:var(--text);}
+.acc-card h2 i{color:var(--accent);}
+.acc-profile{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.acc-avatar{position:relative;width:72px;height:72px;border-radius:50%;overflow:hidden;display:grid;place-items:center;flex-shrink:0;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:800;font-size:1.7rem;font-family:var(--font-display);}
+.acc-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.acc-who{flex:1;min-width:0;}
+.acc-who h1{font-size:1.3rem;margin:0 0 4px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.acc-who p{margin:0;font-size:.85rem;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;text-align:start;}
+.acc-badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+.acc-badge{font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:9999px;background:rgba(46,155,224,.12);color:var(--accent-dark);}
+.acc-form{display:flex;flex-direction:column;gap:16px;}
+.acc-meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.8rem;color:var(--text-secondary);}
+.acc-meta i{color:var(--accent);margin-inline-end:4px;}
+.acc-meta b{color:var(--text);}
+.acc-submit{width:100%;justify-content:center;}
+.acc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:9999px;font-weight:700;font-size:.85rem;cursor:pointer;border:1.5px solid var(--border,rgba(0,0,0,.12));background:transparent;color:var(--text);transition:var(--t);}
+.acc-btn:hover{border-color:var(--accent);color:var(--accent-dark);}
+.acc-btn-danger{background:#E0554B;color:#fff;border-color:#E0554B;}
+.acc-btn-danger:hover{background:#c9443b;color:#fff;border-color:#c9443b;}
+.acc-danger h2,.acc-danger h2 i{color:#E0554B;}
+.acc-note,.acc-empty{font-size:.85rem;color:var(--text-secondary);margin:0 0 14px;}
+.acc-saved{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.acc-saved-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:rgba(46,155,224,.07);}
+.acc-saved-item a{flex:1;font-weight:700;font-size:.9rem;color:var(--text);}
+.acc-saved-item a:hover{color:var(--accent-dark);}
+.acc-saved-item button{color:#E0554B;font-size:.95rem;padding:6px;}
+.acc-browse{margin-top:4px;}
+@media (max-width:560px){.acc-card{padding:20px;border-radius:24px;}.acc-main{padding-top:100px;}}

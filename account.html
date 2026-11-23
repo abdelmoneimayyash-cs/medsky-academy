@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#2E9BE0" />
+  <title data-i18n="meta.title">حسابي | MedSky Training Academy</title>
+  <meta name="description" content="إدارة حسابك في أكاديمية ميدسكاي." />
+  <link rel="canonical" href="https://medskyacademy.com/account.html" />
+  <script src="javascript/user-nav.js"></script>
+
+  <link rel="preload" as="image" href="images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" fetchpriority="high"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/account.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" type="image/png" />
+  <link rel="stylesheet" href="css/fx.css"/>
+  <script src="javascript/device-font.js"></script>
+</head>
+<body class="auth-body">
+
+  <div class="site-loader" id="siteLoader" aria-hidden="true">
+    <div class="loader-logo-wrap">
+      <img fetchpriority="high" decoding="async" src="images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ===================== Floating Navbar ===================== -->
+  <header class="msn" id="navbar">
+    <div class="msn-bar">
+
+      <a href="index.html" class="msn-logo" aria-label="ميدسكاي">
+        <img fetchpriority="high" decoding="async" src="images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky Training Academy" />
+      </a>
+
+      <nav class="msn-links" aria-label="Main">
+        <a href="index.html#hero" class="msn-link" data-i18n="nav.home">الرئيسية</a>
+        <a href="index.html#courses" class="msn-link" data-i18n="nav.courses">الدورات</a>
+        <a href="index.html#programs" class="msn-link" data-i18n="nav.programs">نحو الاحتراف</a>
+        <a href="index.html#trainers" class="msn-link" data-i18n="nav.trainers">المدربون</a>
+        <a href="https://wa.me/201505628143" target="_blank" rel="noopener" class="msn-link" data-i18n="nav.contact">تواصل معنا</a>
+      </nav>
+
+      <div class="msn-tools">
+
+        <div class="msn-lang" id="langDD">
+          <button type="button" class="msn-icon" id="langToggle" aria-haspopup="menu" aria-expanded="false" aria-label="اختر اللغة" data-i18n-aria="aria.chooseLang">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c2.6 2.6 4 5.9 4 9.5s-1.4 6.9-4 9.5c-2.6-2.6-4-5.9-4-9.5s1.4-6.9 4-9.5z"/></svg>
+          </button>
+          <div class="msn-menu" id="langMenu" role="menu">
+            <button type="button" class="active" data-lang="ar" role="menuitem">العربية</button>
+            <button type="button" data-lang="en" role="menuitem">English</button>
+          </div>
+        </div>
+
+        <button type="button" class="msn-icon" id="themeToggle" aria-label="اختر المظهر" data-i18n-aria="aria.chooseTheme">
+          <span class="msn-swap" aria-hidden="true">
+            <svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </button>
+
+        <span class="msn-sep" aria-hidden="true"></span>
+
+        <a href="auth.html" class="msn-login">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="mobile.login">تسجيل الدخول</span>
+        </a>
+
+      </div>
+
+      <button type="button" class="msn-burger" id="hamburger" aria-label="فتح القائمة" data-i18n-aria="aria.openMenu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== Mobile Sheet ===================== -->
+  <div class="msn-sheet" id="mobileMenu" role="dialog" aria-modal="true">
+    <div class="msn-backdrop" data-close></div>
+    <div class="msn-panel">
+
+      <div class="msn-panel-head">
+        <a href="index.html" class="msn-logo" data-close aria-label="ميدسكاي" style="margin:0;">
+          <img fetchpriority="high" decoding="async" src="images/0786dcbd-1d22-422b-9182-5fd58fbbd30f.png" alt="MedSky Training Academy" />
+        </a>
+        <button type="button" class="msn-close" id="mobileClose" aria-label="إغلاق القائمة" data-i18n-aria="aria.closeMenu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="msn-mlinks">
+        <a href="index.html#hero" class="msn-mlink" data-close data-i18n="nav.home">الرئيسية</a>
+        <a href="index.html#courses" class="msn-mlink" data-close data-i18n="nav.courses">الدورات</a>
+        <a href="index.html#programs" class="msn-mlink" data-close data-i18n="nav.programsShort">البرامج</a>
+        <a href="index.html#trainers" class="msn-mlink" data-close data-i18n="nav.trainers">المدربون</a>
+        <a href="https://wa.me/201505628143" target="_blank" rel="noopener" class="msn-mlink" data-close data-i18n="nav.contact">تواصل معنا</a>
+      </div>
+
+      <div class="msn-mrow">
+        <span data-i18n="mobile.language">اللغة</span>
+        <div class="msn-seg">
+          <button type="button" class="active" data-lang="ar">العربية</button>
+          <button type="button" data-lang="en">English</button>
+        </div>
+      </div>
+
+      <button type="button" class="msn-mrow" id="mobileThemeToggle">
+        <span data-i18n="mobile.appearance">المظهر</span>
+        <span class="msn-row-end">
+          <span id="mobileThemeValue">فاتح</span>
+          <span class="msn-swap" aria-hidden="true">
+            <svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </span>
+        </span>
+      </button>
+
+      <div class="msn-mactions">
+        <a href="auth.html?mode=register" class="msn-cta" data-close data-i18n="nav.signup">ابدأ مجاناً</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="auth-main acc-main">
+    <div class="auth-bg" aria-hidden="true">
+      <div class="hero-glow"></div>
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+      <div class="auth-grid"></div>
+      <div class="hero-fx" data-fx="grid" aria-hidden="true"></div>
+    </div>
+
+    <div class="acc-shell" id="accShell" hidden>
+
+      <section class="acc-card acc-profile reveal-up">
+        <div class="acc-avatar" id="accAvatar"></div>
+        <div class="acc-who">
+          <h1 id="accName"></h1>
+          <p id="accEmail" dir="ltr"></p>
+        </div>
+        <button type="button" class="acc-btn acc-btn-ghost" id="accLogout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span data-i18n="acc.logout">تسجيل الخروج</span>
+        </button>
+      </section>
+
+      <section class="acc-card reveal-up">
+        <h2><i class="fa-solid fa-user-pen"></i> <span data-i18n="acc.profile">بيانات الحساب</span></h2>
+        <form id="nameForm" class="acc-form" novalidate>
+          <div class="auth-field">
+            <label for="accNameInput" data-i18n="register.name">الاسم الكامل</label>
+            <div class="auth-input-wrap">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="accNameInput" maxlength="80" autocomplete="name" required />
+            </div>
+            <span class="auth-field-error" data-error-for="accNameInput"></span>
+          </div>
+          <div class="acc-meta">
+            <span><i class="fa-solid fa-calendar-plus"></i> <span data-i18n="acc.joined">تاريخ الانضمام</span>: <b id="accJoined"></b></span>
+          </div>
+          <p class="auth-form-error" data-form-error aria-live="polite"></p>
+          <button type="submit" class="btn-primary btn-ripple auth-submit acc-submit"><span data-i18n="acc.save">حفظ التغييرات</span></button>
+        </form>
+      </section>
+
+      <section class="acc-card reveal-up">
+        <h2><i class="fa-solid fa-bookmark"></i> <span data-i18n="acc.saved">دوراتي المحفوظة</span></h2>
+        <div id="savedList" class="acc-saved"></div>
+        <p class="acc-empty" id="savedEmpty" hidden data-i18n="acc.savedEmpty">لم تحفظ أي دورة بعد. تصفّح الدورات واضغط على أيقونة الحفظ.</p>
+        <a href="courses.html" class="acc-btn acc-btn-ghost acc-browse"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="acc.browse">تصفّح الدورات</span></a>
+      </section>
+
+      <section class="acc-card reveal-up">
+        <h2><i class="fa-solid fa-key"></i> <span id="pwTitle" data-i18n="acc.changePw">تغيير كلمة المرور</span></h2>
+        <form id="pwForm" class="acc-form" novalidate>
+          <div class="auth-field" id="curPwField">
+            <label for="curPw" data-i18n="acc.currentPw">كلمة المرور الحالية</label>
+            <div class="auth-input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="curPw" autocomplete="current-password" maxlength="128" />
+              <button type="button" class="auth-eye-toggle" data-toggle-for="curPw" data-i18n-aria="aria.showPassword" aria-label="إظهار كلمة المرور"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <span class="auth-field-error" data-error-for="curPw"></span>
+          </div>
+          <div class="auth-field">
+            <label for="newPw" data-i18n="reset.newPassword">كلمة المرور الجديدة</label>
+            <div class="auth-input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="newPw" autocomplete="new-password" minlength="8" maxlength="128" />
+              <button type="button" class="auth-eye-toggle" data-toggle-for="newPw" data-i18n-aria="aria.showPassword" aria-label="إظهار كلمة المرور"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <span class="auth-field-error" data-error-for="newPw"></span>
+          </div>
+          <div class="auth-field">
+            <label for="newPw2" data-i18n="register.confirm">تأكيد كلمة المرور</label>
+            <div class="auth-input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="newPw2" autocomplete="new-password" maxlength="128" />
+              <button type="button" class="auth-eye-toggle" data-toggle-for="newPw2" data-i18n-aria="aria.showPassword" aria-label="إظهار كلمة المرور"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <span class="auth-field-error" data-error-for="newPw2"></span>
+          </div>
+          <p class="auth-form-error" data-form-error aria-live="polite"></p>
+          <button type="submit" class="btn-primary btn-ripple auth-submit acc-submit"><span data-i18n="acc.updatePw">تحديث كلمة المرور</span></button>
+        </form>
+      </section>
+
+      <section class="acc-card acc-danger reveal-up">
+        <h2><i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="acc.danger">حذف الحساب</span></h2>
+        <p class="acc-note" data-i18n="acc.dangerText">سيتم حذف حسابك وجميع بياناتك المحفوظة نهائياً ولا يمكن التراجع.</p>
+        <form id="delForm" class="acc-form" novalidate>
+          <div class="auth-field" id="delPwField">
+            <label for="delPw" data-i18n="acc.confirmPw">أدخل كلمة المرور للتأكيد</label>
+            <div class="auth-input-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="delPw" autocomplete="current-password" maxlength="128" />
+              <button type="button" class="auth-eye-toggle" data-toggle-for="delPw" data-i18n-aria="aria.showPassword" aria-label="إظهار كلمة المرور"><i class="fa-solid fa-eye"></i></button>
+            </div>
+            <span class="auth-field-error" data-error-for="delPw"></span>
+          </div>
+          <p class="auth-form-error" data-form-error aria-live="polite"></p>
+          <button type="submit" class="acc-btn acc-btn-danger"><i class="fa-solid fa-trash"></i> <span data-i18n="acc.deleteBtn">حذف حسابي نهائياً</span></button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="auth-toast" id="authToast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="authToastText"></span>
+  </div>
+
+  <div class="auth-modal-overlay" id="successModalOverlay" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <div class="auth-modal" id="successModal">
+      <div class="auth-modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h3 id="successModalTitle" data-modal-title data-i18n="modal.successTitle">تم تسجيل الدخول بنجاح</h3>
+      <p data-modal-text data-i18n="modal.successMessage">جاري تحويلك إلى الصفحة الرئيسية...</p>
+      <div class="auth-modal-spinner"></div>
+    </div>
+  </div>
+
+  <script src="javascript/account.js"></script>
+
+  <script src="javascript/hero-fx.js" defer></script>
+</body>
+</html>
