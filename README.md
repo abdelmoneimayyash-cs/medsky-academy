@@ -20,6 +20,12 @@
 
 The project combines a responsive front end with a Node.js and Express backend.
 
+## Screenshots
+
+A preview of the MedSky Academy homepage.
+
+![MedSky Academy homepage](docs/images/homepage.webp)
+
 ## Platform
 
 | Area | Description |
